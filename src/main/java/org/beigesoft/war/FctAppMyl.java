@@ -46,6 +46,7 @@ import org.beigesoft.jdbc.FctMysql;
  */
 public class FctAppMyl implements IFctAsm<ResultSet> {
 //TODO JSP autofocus
+//TODO actions FO e.g. entFoSv->entSv
   /**
    * <p>Main only factory.</p>
    **/
