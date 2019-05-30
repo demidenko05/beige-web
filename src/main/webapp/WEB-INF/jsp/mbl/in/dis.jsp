@@ -9,7 +9,7 @@
   <td>
     <div class="input-line">
       <c:set var="mdl" value="${ent[fdNm]}" scope="request"/> 
-      <jsp:include page="../../st/${hldUvd.stg(cls,fdNm,'str')}.jsp"/>
+      <jsp:include page="../../st/${hldUvd.stgNn(cls,fdNm,'str')}.jsp"/>
     </div>
   </td>
 </tr>

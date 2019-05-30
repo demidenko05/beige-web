@@ -4,19 +4,18 @@
 <c:if test="${not empty liHe}">
   <jsp:include page="../ls/${liHe}.jsp"/>
 </c:if>
-<c:set var="liAc" value="${hldUvd.stg(cls,'liAc')}"/>
 <table>
   <tr>
-    <jsp:include page="../${param.mbl}ls/roHe.jsp"/>
+    <jsp:include page="../${param.mbl}pi/roHe.jsp"/>
     <th class="column-actions">${i18n.getMsg('Actions', rvs.upf.lng.iid)}</th>
   </tr>
   <c:forEach var="ent" items="${rvs.uvs.ents}">
     <c:set var="ent" value="${ent}" scope="request"/>
     <tr>
-      <jsp:include page="../${param.mbl}ls/roDe.jsp"/>
+      <jsp:include page="../${param.mbl}pi/roDe.jsp"/>
       <td class="column-actions">
         <c:if test="${empty param.pic}">
-          <jsp:include page="../pi/${hldUvd.stg(cls,'pic')}.jsp"/>
+          <jsp:include page="../pi/${hldUvd.stgNn(cls,'pic')}.jsp"/>
         </c:if>
         <c:if test="${not empty param.pic}">
           <jsp:include page="../pi/${param.pic}.jsp"/>

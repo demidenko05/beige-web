@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <td>
-<c:forEach var="fn" items="${hldUvd.lazLstFds(cls)}">
+<c:forEach var="fn" items="${hldUvd.lazPickFds(cls)}">
   <c:set var="ceDe" value="${hldUvd.stg(cls,fn,'ceDe')}" scope="request"/>
   <c:if test="${not empty ceDe}">
     <c:if test="${not empty isFst}">
@@ -12,7 +12,7 @@
     </c:if>
     <c:set var="fdNm" value="${fn}" scope="request"/>
     <c:set var="mdl" value="${ent[fn]}" scope="request"/>
-    <jsp:include page="${ceDe}.jsp"/>
+    <jsp:include page="../ls/${ceDe}.jsp"/>
   </c:if>
 </c:forEach>
 </td>

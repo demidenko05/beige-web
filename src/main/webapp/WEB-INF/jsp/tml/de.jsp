@@ -21,7 +21,7 @@
       </c:forEach>
       <table class="tbl-fieldset">
       <c:set var="auFoc" value="autofocus" scope="request"/>
-      <c:forEach var="fn" items="${hldUvd.lazLstFds(cls)}">
+      <c:forEach var="fn" items="${hldUvd.lazFrmFds(cls)}">
         <c:set var="fdNm" value="${fn}" scope="request"/>
         <c:if test="${not empty hldUvd.stg(cls,fn,'wde')}">
           <jsp:include page="../${param.mbl}in/${hldUvd.stg(cls,fn,'wde')}.jsp"/>
@@ -35,17 +35,17 @@
           <div class="title-list"> ${i18n.getMsg(nameEnts, rvs.upf.lng.iid)} </div>
           <table>
             <tr>
-              <c:forEach var="fn" items="${hldUvd.lazLstFds(cls)}">
+              <c:forEach var="fn" items="${hldUvd.lazFrmFds(cls)}">
                 <th>${i18n.getMsg(fn, rvs.upf.lng.iid)}</th>
               </c:forEach>
             </tr>
             <c:forEach var="entt" items="${olme.value}">
               <c:set var="ent" value="${entt}" scope="request"/>
               <tr>
-                <c:forEach var="fn" items="${hldUvd.lazLstFds(cls)}">
+                <c:forEach var="fn" items="${hldUvd.lazFrmFds(cls)}">
                   <c:set var="fdNm" value="${fn}" scope="request"/>
                   <c:set var="mdl" value="${ent[fn]}" scope="request"/>
-                  <td><jsp:include page="../st/${hldUvd.stg(cls,fn,'str')}.jsp"/></td>
+                  <td><jsp:include page="../st/${hldUvd.stgNn(cls,fn,'str')}.jsp"/></td>
                 </c:forEach>
               </tr>
             </c:forEach>
@@ -53,7 +53,7 @@
         </c:forEach>
         <c:set var="cls" value="${rvs.uvs.cls}" scope="request"/>
       </c:if>
-      <jsp:include page="../fm/${hldUvd.stg(cls,'dlAc')}.jsp"/>
+      <jsp:include page="../fm/${hldUvd.stgNn(cls,'dlAc')}.jsp"/>
     </form>
   </div>
 </dialog>

@@ -4,5 +4,5 @@
   <c:set var="clVlTd" value=" style='text-align: right;'"/>
 </c:if>
 <td${clVlTd}>
-  <jsp:include page="../st/${hldUvd.stg(cls,fdNm,'str')}.jsp"/>
+  <jsp:include page="../st/${hldUvd.stgNn(cls,fdNm,'str')}.jsp"/>
 </td>

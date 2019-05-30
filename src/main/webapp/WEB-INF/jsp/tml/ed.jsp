@@ -24,14 +24,14 @@
       </c:forEach>
       <table class="tbl-fieldset">
       <c:set var="auFoc" value="autofocus" scope="request"/>
-      <c:forEach var="fn" items="${hldUvd.lazLstFds(cls)}">
+      <c:forEach var="fn" items="${hldUvd.lazFrmFds(cls)}">
         <c:set var="fdNm" value="${fn}" scope="request"/>
         <c:if test="${not empty hldUvd.stg(cls,fn,'inWr')}">
           <jsp:include page="../fm/${hldUvd.stg(cls,fn,'inWr')}.jsp"/>
         </c:if>
       </c:forEach>
       </table>
-      <jsp:include page="../fm/${hldUvd.stg(cls,'fmAc')}.jsp"/>
+      <jsp:include page="../fm/${hldUvd.stgNn(cls,'fmAc')}.jsp"/>
     </form>
     <c:if test="${!ent.isNew && rvs.uvs.owdEntsMp != null && rvs.uvs.owdEntsMp.size() gt 0}">
       <c:forEach var="olme" items="${rvs.uvs.owdEntsMp}">
