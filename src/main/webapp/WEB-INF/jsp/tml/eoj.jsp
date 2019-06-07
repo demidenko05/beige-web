@@ -5,7 +5,6 @@
 <jsp:useBean id="usdDp" class="java.util.HashMap" scope="request"/>
 <c:set var="ent" value="${rvs.uvs.ent}" scope="request"/>
 <c:set var="frPlNm" value="frmSbPl" scope="request"/>
-<c:set var="acEntSv" value="entFoSv" scope="request"/>
 <c:import url="/WEB-INF/jsp/tml/ed.jsp" varReader="rdEdEn" charEncoding="UTF-8">
 {"mlTrRsp":
   [{"trgNm": "${frPlNm}", "cont": "${utJsp.toJsonStrCls(rdEdEn)}",

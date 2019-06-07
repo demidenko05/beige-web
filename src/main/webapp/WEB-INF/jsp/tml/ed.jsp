@@ -11,7 +11,7 @@
       <button onclick="bsClsDlgCf('${frPlNm}Ed')" class="btn-close">x</button>
     </div>
     <form id="${frPlNm}EdFrm" action="${frAct}" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="act" value="${acEntSv},entEd,lst">
+      <input type="hidden" name="act" value="entSv,entEd,lst">
       <input type="hidden" name="ent" value="${cls.simpleName}">
       <input type="hidden" name="pg" value="${param.pg}">
       <c:if test="${not empty param.mbl}">

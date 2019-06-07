@@ -14,22 +14,18 @@
 </tr>
   <td>
     <div class="input-line">
-      <select required name="MaFrn.clsNm" onchange="bsInpChn(this);">
-        <option value=""${emptsel}>-</option>
-        <c:if test="${ent.clsNm ne 'Lng'}">
-          <c:set var="sel" value=""/>
-        </c:if>
-        <c:if test="${ent.clsNm eq 'Lng'}">
-          <c:set var="sel" value="selected"/>
-        </c:if>
-        <option value="Lng"${sel}>${i18n.getMsg('Lng', rvs.upf.lng.iid)}</option>
-        <c:if test="${ent.clsNm ne 'Cntr'}">
-          <c:set var="sel" value=""/>
-        </c:if>
-        <c:if test="${ent.clsNm eq 'Cntr'}">
-          <c:set var="sel" value="selected"/>
-        </c:if>
-        <option value="Cntr"${sel}>${i18n.getMsg('Cntr', rvs.upf.lng.iid)}</option>
+      <select ${auFoc} required name="MaFrn.clsNm" onchange="bsInpChn(this);">
+        <c:set var="auFoc" value="" scope="request"/>
+        <option value="" ${emptsel}>-</option>
+        <c:forEach var="cls" items="${hlMaFrCl.clss}">
+          <c:if test="${ent.clsNm ne cls.simpleName}">
+            <c:set var="sel" value=""/>
+          </c:if>
+          <c:if test="${ent.clsNm eq cls.simpleName}">
+            <c:set var="sel" value="selected"/>
+          </c:if>
+          <option value="${cls.simpleName}" ${sel}>${i18n.getMsg(cls.simpleName, rvs.upf.lng.iid)}</option>
+        </c:forEach>
       </select>
     </div>
   </td>
