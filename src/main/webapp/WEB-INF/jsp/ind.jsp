@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="dropdown">
-      <a href="#" class="dropdown-btn">${i18n.getMsg("Advanced", rvs.upf.lng.iid)}</a>
+      <a href="#" class="dropdown-btn">...</a>
       <div class="dropdown-content">
         <a href="adm/srv">${i18n.getMsg("Admin", rvs.upf.lng.iid)}</a>
         <a href="adm/ntr?rnd=dbc">${i18n.getMsg("ImportDatabase", rvs.upf.lng.iid)}</a>

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="../css/bsCmn.css">
   <link rel="icon" type="image/png" href="../img/favicon.png">
-  <title>Beigesoft ™ Accounting All In One</title>
+  <title>${i18n.getMsg("app_name", rvs.upf.lng.iid)}</title>
 </head>
 <body style="padding: 20px;">
 <br>
@@ -22,14 +22,14 @@
 
 <div class="form-std form-70-33"  style="top: initial;">
   <div class="dialog-title">
-    ${i18n.getMsg("change_passwd", rvs.upf.lng.iid)}
+    ${i18n.getMsg("change_password", rvs.upf.lng.iid)}
   </div>
   <form method="post" action="ntr">
     <input type="hidden" name="prc" value="PrcUsrPwd">
     <table class="tbl-fieldset">
       <tr>
         <td>
-          <label>${i18n.getMsg("user_name", rvs.upf.lng.iid)}:</label>
+          <label>${i18n.getMsg("usr", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
           <div style="display: flex;">
@@ -39,7 +39,7 @@
       </tr>
       <tr>
         <td>
-          <label>${i18n.getMsg("user_pass_old", rvs.upf.lng.iid)}:</label>
+          <label>${i18n.getMsg("pwd_old", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
           <div style="display: flex;">
@@ -49,7 +49,7 @@
       </tr>
       <tr>
         <td>
-          <label>${i18n.getMsg("user_pass", rvs.upf.lng.iid)}:</label>
+          <label>${i18n.getMsg("pwd", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
           <div style="display: flex;">
@@ -59,7 +59,7 @@
       </tr>
       <tr>
         <td>
-          <label>${i18n.getMsg("user_pass_rep", rvs.upf.lng.iid)}:</label>
+          <label>${i18n.getMsg("pwdc", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
           <div style="display: flex;">

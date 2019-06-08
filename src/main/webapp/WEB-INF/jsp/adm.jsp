@@ -25,8 +25,8 @@
       <div class="dropdown-content">
         <a href="../">Home</a>
         <a href="srv">Refresh</a>
-        <a href="#" onclick="bsGtAjx('GET', 'srv?act=lst&rnd=lhj&ent=EmCon&pg=1');">${i18n.getMsg("EmaCons", rvs.upf.lng.iid)}</a>
-        <a href="#" onclick="bsGtAjx('GET', 'srv?act=lst&rnd=lhj&ent=EmAdr&pg=1');">${i18n.getMsg("EmaAdrs", rvs.upf.lng.iid)}</a>
+        <a href="#" onclick="bsGtAjx('GET', 'srv?act=lst&rnd=lhj&ent=EmCon&pg=1');">${i18n.getMsg("EmCons", rvs.upf.lng.iid)}</a>
+        <a href="#" onclick="bsGtAjx('GET', 'srv?act=lst&rnd=lhj&ent=EmAdr&pg=1');">${i18n.getMsg("EmAdrs", rvs.upf.lng.iid)}</a>
         <a href="#" onclick="bsGtAjx('GET', 'srv?act=lst&rnd=lhj&ent=EmMsg&pg=1');">${i18n.getMsg("EmMsgs", rvs.upf.lng.iid)}</a>
         <a href="#" onclick="bsGtAjx('GET', 'srv?act=lst&rnd=lhj&ent=UsTmc&pg=1');">${i18n.getMsg("UsTmc", rvs.upf.lng.iid)}</a>
         <a href="#" onclick="bsGtAjx('GET', 'srv?act=lst&rnd=lhj&ent=UsRlTmc&pg=1');">${i18n.getMsg("UsRlTmcs", rvs.upf.lng.iid)}</a>
@@ -83,7 +83,7 @@
               <tbody>
                 <tr>
                   <td>
-                    <label>${i18n.getMsg("lang", rvs.upf.lng.iid)}</label>
+                    <label>${i18n.getMsg("lng", rvs.upf.lng.iid)}</label>
                   </td>
                   <td>
                     <div class="input-line">
@@ -119,7 +119,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <label>${i18n.getMsg("decimalGroupSep", rvs.upf.lng.iid)}</label>
+                    <label>${i18n.getMsg("dcGrSp", rvs.upf.lng.iid)}</label>
                   </td>
                   <td>
                     <div class="input-line">

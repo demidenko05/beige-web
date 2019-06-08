@@ -28,11 +28,11 @@
     <h4>${i18n.getMsg("curr_db", rvs.upf.lng.iid)}: ${currDb}</h4>
       <table>
       <tr>
-        <th style="padding: .4rem;">${i18n.getMsg("database", rvs.upf.lng.iid)}</th>
-        <th style="padding: .4rem; width: 40%;">${i18n.getMsg("actions", rvs.upf.lng.iid)}</th>
+        <th style="padding: .4rem;">${i18n.getMsg("Database", rvs.upf.lng.iid)}</th>
+        <th style="padding: .4rem; width: 40%;">${i18n.getMsg("Actions", rvs.upf.lng.iid)}</th>
       </tr>
-      <c:set var="changeq" value="${i18n.getMsg('change_db_curr', rvs.upf.lng.iid)}"/>
-      <c:set var="backupq" value="${i18n.getMsg('backup', rvs.upf.lng.iid)}"/>
+      <c:set var="changeq" value="${i18n.getMsg('Сhange', rvs.upf.lng.iid)}"/>
+      <c:set var="backupq" value="${i18n.getMsg('Backup', rvs.upf.lng.iid)}"/>
       <c:set var="delq" value="${i18n.getMsg('Delete', rvs.upf.lng.iid)}"/>
       <c:forEach var="database" items="${databases}">
         <tr>
@@ -40,10 +40,10 @@
             ${database}.sqlite
           </td>
           <td style="padding: 1rem;">
-            <a class="btn" href="?prc=PrcMngDb&act=change&dbNm=${database}" onclick="bsCnfHref(this, '${changeq}?'); return false;">${i18n.getMsg("change_db_curr", rvs.upf.lng.iid)}</a>
+            <a class="btn" href="?prc=PrcMngDb&act=change&dbNm=${database}" onclick="bsCnfHref(this, '${changeq}?'); return false;">${i18n.getMsg("Change", rvs.upf.lng.iid)}</a>
             <br><br>
             <c:if test="${not empty ourPublicKeyStr && not empty foreignPublicKeyStr}">
-              <a class="btn" href="?prc=PrcMngDb&act=backup&dbNm=${database}" onclick="bsCnfHref(this, '${backupq}?'); return false;">${i18n.getMsg("backup", rvs.upf.lng.iid)}</a>
+              <a class="btn" href="?prc=PrcMngDb&act=backup&dbNm=${database}" onclick="bsCnfHref(this, '${backupq}?'); return false;">${i18n.getMsg("Backup", rvs.upf.lng.iid)}</a>
               <br><br>
             </c:if>
             <a class="btn" href="?prc=PrcMngDb&act=delete&dbNm=${database}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
@@ -53,13 +53,13 @@
     </table>
   </div>
 
-  <c:set var="restoreq" value="${i18n.getMsg('restore', rvs.upf.lng.iid)}"/>
+  <c:set var="restoreq" value="${i18n.getMsg('Restore', rvs.upf.lng.iid)}"/>
   <div style="text-align: center; margin-bottom: 1rem;">
     <h4>${i18n.getMsg("backuped_db", rvs.upf.lng.iid)} in ${backupDir}:</h4>
       <table>
       <tr>
-        <th style="padding: .4rem;">${i18n.getMsg("database", rvs.upf.lng.iid)}</th>
-        <th style="padding: .4rem;">${i18n.getMsg("actions", rvs.upf.lng.iid)}</th>
+        <th style="padding: .4rem;">${i18n.getMsg("Database", rvs.upf.lng.iid)}</th>
+        <th style="padding: .4rem;">${i18n.getMsg("Actions", rvs.upf.lng.iid)}</th>
       </tr>
       <c:forEach var="database" items="${bkDatabases}">
         <tr>
@@ -68,7 +68,7 @@
           </td>
           <c:if test="${not empty ourPublicKeyStr && not empty foreignPublicKeyStr}">
             <td style="padding: 1rem;">
-              <a class="btn" href="?prc=PrcMngDb&act=restore&dbNm=${database}" onclick="bsCnfHref(this, '${restoreq}?'); return false;">${i18n.getMsg("restore", rvs.upf.lng.iid)}</a>
+              <a class="btn" href="?prc=PrcMngDb&act=restore&dbNm=${database}" onclick="bsCnfHref(this, '${restoreq}?'); return false;">${i18n.getMsg("Restore", rvs.upf.lng.iid)}</a>
             </td>
           </c:if>
         </tr>
@@ -78,7 +78,7 @@
 
   <div style="border: solid 1px;">
     <div class="dialog-title">
-      ${i18n.getMsg("create_db_curr", rvs.upf.lng.iid)}
+      ${i18n.getMsg("Create", rvs.upf.lng.iid)}
     </div>
     <form method="post">
       <input type="hidden" name="act" value="create">
@@ -96,7 +96,7 @@
         </tr>
         <tr>
           <td>
-            <label>${i18n.getMsg("idDatabase", rvs.upf.lng.iid)}:</label>
+            <label>${i18n.getMsg("dbId", rvs.upf.lng.iid)}:</label>
           </td>
           <td>
             <div style="display: flex;">

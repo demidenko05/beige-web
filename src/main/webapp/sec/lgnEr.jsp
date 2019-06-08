@@ -4,9 +4,9 @@
 <html>
 <head>    
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Beige WEB login</title>
   <link rel="stylesheet" href="../css/bsCmn.css">
   <link rel="icon" type="image/png" href="../img/favicon.png">
+  <title>${pageContext.servletContext.getAttribute("i18n").getMsg('app_name')}</title>
 </head>
 <body>
   ${pageContext.servletContext.getAttribute("sesTrk").fail(pageContext.request)}
@@ -18,16 +18,16 @@
     
     <div class="form-std form-33-33">
       <div class="dialog-title">
-        Authorization
+        ${pageContext.servletContext.getAttribute("i18n").getMsg('Authorization')}
       </div>
       <form id="formLogin" action="j_security_check" method="post">
-        <label>User</label>
+        <label>${pageContext.servletContext.getAttribute("i18n").getMsg('usr')}</label>
         <input type="text" name="j_username"/>
-        <label>Password</label>
+        <label>${pageContext.servletContext.getAttribute("i18n").getMsg('pwd')}</label>
         <input type="password" name="j_password"/>
         <div class="form-actions">
           <input type="submit" value="Login"/>
-          <a href="../">Close</a>
+          <a href="../">${pageContext.servletContext.getAttribute("i18n").getMsg('Close')}</a>
         </div>
       </form>
     </div>

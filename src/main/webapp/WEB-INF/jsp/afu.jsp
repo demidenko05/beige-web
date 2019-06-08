@@ -27,7 +27,7 @@
     <table class="tbl-fieldset">
       <tr>
         <td>
-          <label>${i18n.getMsg("user_name", rvs.upf.lng.iid)}:</label>
+          <label>${i18n.getMsg("usr", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
           <div style="display: flex;">
@@ -37,7 +37,7 @@
       </tr>
       <tr>
         <td>
-          <label>${i18n.getMsg("user_pass", rvs.upf.lng.iid)}:</label>
+          <label>${i18n.getMsg("pwd", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
           <div style="display: flex;">
@@ -47,7 +47,7 @@
       </tr>
       <tr>
         <td>
-          <label>${i18n.getMsg("user_pass_rep", rvs.upf.lng.iid)}:</label>
+          <label>${i18n.getMsg("pwdc", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
           <div style="display: flex;">
