@@ -9,7 +9,7 @@
   <td>
     <div class="input-line">
       <c:set var="reqd" value=""/>
-      <c:if test="${hldUvd.lazNulb(cls,fdNm)}">
+      <c:if test="${!hldUvd.lazNulb(cls,fdNm)}">
         <c:set var="reqd" value="required"/>
       </c:if>
       <input type="${inpTy}" ${auFoc} ${reqd} name="${cls.simpleName}.${fdNm}" value="${hldUvd.toStr(rvs,cls,fdNm,ent[fdNm])}" onchange="bsInpChn(this);" ${inpAdd}/> 

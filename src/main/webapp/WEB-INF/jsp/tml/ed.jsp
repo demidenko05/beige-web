@@ -37,7 +37,7 @@
       <c:forEach var="olme" items="${rvs.uvs.owdEntsMp}">
         <c:set var="olme" value="${olme}" scope="request"/>
         <c:set var="cls" value="${olme.key}" scope="request"/>
-        <jsp:include page="../ow/owl.jsp"/>
+        <jsp:include page="../ow/${hldUvd.stgNn(cls,'owl')}.jsp"/>
       </c:forEach>
       <c:set var="cls" value="${rvs.uvs.cls}" scope="request"/>
     </c:if>

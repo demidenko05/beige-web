@@ -4,7 +4,7 @@
   <div class="form-std">
     <div class="dialog-title">
       <c:set var="nameEnts" value="${param.ent}s"/>
-      ${srvI18n.getMsg(nameEnts, reqVars.lang)} ${i18n.getMsg("picker", reqVars.lang)}
+      ${srvI18n.getMsg(nameEnts, reqVars.lang)} ${i18n.getMsg("Picker", reqVars.lang)}
       <button onclick="bsClsDlg('${lsPlNm}${param.ent}Dlg')" class="btn-close">x</button>
     </div>
     <div id="${lsPlNm}${param.ent}lst">
