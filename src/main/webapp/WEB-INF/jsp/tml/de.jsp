@@ -36,7 +36,9 @@
           <table>
             <tr>
               <c:forEach var="fn" items="${hldUvd.lazFrmFds(cls)}">
-                <th>${i18n.getMsg(fn, rvs.upf.lng.iid)}</th>
+                <c:if test="${not empty hldUvd.stg(cls,fn,'ceHe')}">
+                  <th>${i18n.getMsg(fn, rvs.upf.lng.iid)}</th>
+                </c:if>
               </c:forEach>
             </tr>
             <c:forEach var="entt" items="${olme.value}">
@@ -44,8 +46,10 @@
               <tr>
                 <c:forEach var="fn" items="${hldUvd.lazFrmFds(cls)}">
                   <c:set var="fdNm" value="${fn}" scope="request"/>
-                  <c:set var="mdl" value="${ent[fn]}" scope="request"/>
-                  <td><jsp:include page="../st/${hldUvd.stgNn(cls,fn,'str')}.jsp"/></td>
+                  <c:if test="${not empty hldUvd.stg(cls,fdNm,'ceHe')}">
+                    <c:set var="mdl" value="${ent[fn]}" scope="request"/>
+                    <td><jsp:include page="../st/${hldUvd.stgNn(cls,fn,'str')}.jsp"/></td>
+                  </c:if>
                 </c:forEach>
               </tr>
             </c:forEach>
