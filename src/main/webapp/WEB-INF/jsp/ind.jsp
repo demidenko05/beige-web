@@ -25,7 +25,7 @@
       <a href="#" class="dropdown-btn">${i18n.getMsg("Appearance", rvs.upf.lng.iid)}</a>
       <div class="dropdown-content">
         <a href="sec/srv">${i18n.getMsg("Desktop", rvs.upf.lng.iid)}</a>
-        <a href="sec/srv?rnd=mbl">${i18n.getMsg("Mobile", rvs.upf.lng.iid)}</a>
+        <a href="sec/srv?rnd=mbl&mbl=mbl">${i18n.getMsg("Mobile", rvs.upf.lng.iid)}</a>
       </div>
     </div>
     <div class="dropdown">

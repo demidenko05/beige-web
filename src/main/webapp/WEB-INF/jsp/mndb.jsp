@@ -31,7 +31,7 @@
         <th style="padding: .4rem;">${i18n.getMsg("Database", rvs.upf.lng.iid)}</th>
         <th style="padding: .4rem; width: 40%;">${i18n.getMsg("Actions", rvs.upf.lng.iid)}</th>
       </tr>
-      <c:set var="changeq" value="${i18n.getMsg('Сhange', rvs.upf.lng.iid)}"/>
+      <c:set var="changeq" value="${i18n.getMsg('Change', rvs.upf.lng.iid)}"/>
       <c:set var="backupq" value="${i18n.getMsg('Backup', rvs.upf.lng.iid)}"/>
       <c:set var="delq" value="${i18n.getMsg('Delete', rvs.upf.lng.iid)}"/>
       <c:forEach var="database" items="${databases}">

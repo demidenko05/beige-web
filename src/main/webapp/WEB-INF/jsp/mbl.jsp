@@ -44,7 +44,7 @@
           <a href="../?logoff=true">${pageContext['request'].userPrincipal.name} ${i18n.getMsg("logout", rvs.upf.lng.iid)}</a>
         </c:if>
         <c:if test="${pageContext.servletContext.getInitParameter('ormDir') eq 'sqlite'}">
-          <a href="ntr?prc=PrcUsrPwd">${i18n.getMsg("change_password", rvs.upf.lng.iid)}</a>
+          <a href="ntr?prc=PrcUsrPwd&mbl=mbl/">${i18n.getMsg("change_password", rvs.upf.lng.iid)}</a>
         </c:if>
       </div>
     </div>

@@ -48,6 +48,7 @@
                   <td>
                     <label>${i18n.getMsg("lng", rvs.upf.lng.iid)}</label>
                   </td>
+                <c:if test="${not empty param.mbl}"><tr></tr></c:if>
                   <td>
                     <div class="input-line">
                       <select name="lng" onchange="bsInpChn(this);">
@@ -66,6 +67,7 @@
                   <td>
                     <label>${i18n.getMsg("dcSp", rvs.upf.lng.iid)}</label>
                   </td>
+                <c:if test="${not empty param.mbl}"><tr></tr></c:if>
                   <td>
                     <div class="input-line">
                       <select name="dcSp" onchange="bsInpChn(this);">
@@ -84,6 +86,7 @@
                   <td>
                     <label>${i18n.getMsg("dcGrSp", rvs.upf.lng.iid)}</label>
                   </td>
+                <c:if test="${not empty param.mbl}"><tr></tr></c:if>
                   <td>
                     <div class="input-line">
                       <select name="dcGrSp" onchange="bsInpChn(this);">
@@ -102,6 +105,7 @@
                   <td>
                     <label>${i18n.getMsg("dgInGr", rvs.upf.lng.iid)}</label>
                   </td>
+                <c:if test="${not empty param.mbl}"><tr></tr></c:if>
                   <td>
                     <div class="input-line">
                       <select name="dgInGr" onchange="bsInpChn(this);">
