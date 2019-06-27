@@ -17,8 +17,8 @@
         <c:if test="${empty param.pic}">
           <jsp:include page="../pi/${hldUvd.stgNn(cls,'pic')}.jsp"/>
         </c:if>
-        <c:if test="${not empty param.pic}">
-          <jsp:include page="../pi/${param.pic}.jsp"/>
+        <c:if test="${not empty param.flyPi}">
+          <jsp:include page="../pi/${param.flyPi}.jsp"/>
         </c:if>
       </td>
     </tr>
