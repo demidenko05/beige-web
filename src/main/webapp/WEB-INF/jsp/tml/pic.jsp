@@ -14,7 +14,7 @@
     <tr>
       <jsp:include page="../${param.mbl}pi/roDe.jsp"/>
       <td class="column-actions">
-        <c:if test="${empty param.pic}">
+        <c:if test="${empty param.flyPi}">
           <jsp:include page="../pi/${hldUvd.stgNn(cls,'pic')}.jsp"/>
         </c:if>
         <c:if test="${not empty param.flyPi}">
