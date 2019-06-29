@@ -21,6 +21,7 @@
       </td>
     </tr>
   </c:forEach>
+  <c:set var="ent" value="${rvs.uvs.ent}" scope="request"/>
 </table>
 <c:set var="liFo" value="${hldUvd.stg(cls,'liFo')}"/>
 <c:if test="${not empty liFo}">
