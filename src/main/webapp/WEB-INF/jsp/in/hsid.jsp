@@ -10,7 +10,11 @@
       <c:if test="${!hldUvd.lazNulb(cls,fdNm)}">
         <c:set var="reqd" value="required"/>
       </c:if>
-      <input class="picked-appearence" id="${cls.simpleName}${fdNm}ApVsb" disabled="disabled" type="text" value="${ent[fdNm].nme}">
+      <c:if test="${not empty ent[fdNm]}">
+        <c:set var="mdl" value="${ent[fdNm]}" scope="request"/>
+        <c:set var="prApr"><jsp:include page="../st/${hldUvd.stgNn(cls,fn,'str')}.jsp"/></c:set>
+      </c:if>
+      <input class="picked-appearence" id="${cls.simpleName}${fdNm}ApVsb" disabled="disabled" type="text" value="${prApr}">
       <input id="${cls.simpleName}${fdNm}Id" ${reqd} type="hidden" name="${cls.simpleName}.${fdNm}" value="${ent[fdNm].iid}">
       <button type="button" ${auFoc} class="btn" onclick="bsPick('${hldUvd.fldCls(cls,fdNm).simpleName}','${cls.simpleName}','${fdNm}','&mbl=${param.mbl}');">...</button>
       <c:set var="auFoc" value="" scope="request"/>
