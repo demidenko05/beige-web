@@ -26,6 +26,9 @@
         <c:if test="${not empty hldUvd.stg(cls,fn,'flt')}">
           <jsp:include page="../${param.mbl}fl/${hldUvd.stg(cls,fn,'flt')}.jsp"/>
         </c:if>
+        <c:if test="${not empty hldUvd.stg(cls,fn,'flth')}">
+          <jsp:include page="../${param.mbl}fl/${hldUvd.stg(cls,fn,'flth')}.jsp"/>
+        </c:if>
       </c:forEach>
       <div class="input-line">
         ${i18n.getMsg("OrderBy", rvs.upf.lng.iid)}
