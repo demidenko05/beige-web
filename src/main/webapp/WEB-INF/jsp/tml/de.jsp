@@ -24,7 +24,7 @@
       <c:forEach var="fn" items="${hldUvd.lazFrmFds(cls)}">
         <c:set var="fdNm" value="${fn}" scope="request"/>
         <c:if test="${not empty hldUvd.stg(cls,fn,'wde')}">
-          <jsp:include page="../${param.mbl}in/${hldUvd.stg(cls,fn,'wde')}.jsp"/>
+          <jsp:include page="../in/${hldUvd.stg(cls,fn,'wde')}.jsp"/>
         </c:if>
       </c:forEach>
       </table>

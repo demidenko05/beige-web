@@ -45,7 +45,7 @@ import org.beigesoft.jdbc.FctPostgr;
  * @author Yury Demidenko
  */
 public class FctAppPstg implements IFctAsm<ResultSet> {
-//TODO remove mbl jsp
+
   /**
    * <p>Main only factory.</p>
    **/

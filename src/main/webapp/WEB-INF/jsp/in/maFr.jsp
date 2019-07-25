@@ -10,6 +10,7 @@
   <td>
     <label for="MaFrn.clsNm">${i18n.getMsg("clsNm", rvs.upf.lng.iid)}</label>
   </td>
+<c:if test="${not empty param.mbl}"></tr><tr></c:if>
   <td>
     <div class="input-line">
       <select ${auFoc} required name="MaFrn.clsNm" onchange="bsInpChn(this);">

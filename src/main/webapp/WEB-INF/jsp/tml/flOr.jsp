@@ -24,10 +24,10 @@
       <c:forEach var="fn" items="${hldUvd.lazLstFds(cls)}">
         <c:set var="fdNm" value="${fn}" scope="request"/>
         <c:if test="${not empty hldUvd.stg(cls,fn,'flt')}">
-          <jsp:include page="../${param.mbl}fl/${hldUvd.stg(cls,fn,'flt')}.jsp"/>
+          <jsp:include page="../fl/${hldUvd.stg(cls,fn,'flt')}.jsp"/>
         </c:if>
         <c:if test="${not empty hldUvd.stg(cls,fn,'flth')}">
-          <jsp:include page="../${param.mbl}fl/${hldUvd.stg(cls,fn,'flth')}.jsp"/>
+          <jsp:include page="../fl/${hldUvd.stg(cls,fn,'flth')}.jsp"/>
         </c:if>
       </c:forEach>
       <div class="input-line">

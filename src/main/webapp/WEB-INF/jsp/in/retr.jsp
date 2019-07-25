@@ -10,6 +10,7 @@
   <td>
     <label for="CsvMth.rtrNm">${i18n.getMsg("rtrNm", rvs.upf.lng.iid)}</label>
   </td>
+<c:if test="${not empty param.mbl}"></tr><tr></c:if>
   <td>
     <div class="input-line">
       <select name="CsvMth.rtrNm" onchange="bsInpChn(this);">
