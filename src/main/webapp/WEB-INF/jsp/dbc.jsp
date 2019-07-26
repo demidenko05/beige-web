@@ -56,7 +56,6 @@
             <div style="display: flex;">
               <input type="number" name="maxRecs" value="100">
               <input type="hidden" name="prc" value="DbImp">
-              <input type="hidden" name="prcExp" value="DbExp">
             </div>
           </td>
         </tr>
