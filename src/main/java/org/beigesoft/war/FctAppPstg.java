@@ -60,6 +60,7 @@ public class FctAppPstg implements IFctAsm<ResultSet> {
     this.fctBlc.getFctsAux().add(new FctPostgr());
     this.fctBlc.getFctsAux().add(new FctDbCp<ResultSet>());
     this.fctBlc.getFctsAux().add(new FctMail<ResultSet>());
+    this.fctBlc.getFctDt().setIsPstg(true);
   }
 
   /**
