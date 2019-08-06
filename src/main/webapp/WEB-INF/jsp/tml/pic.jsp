@@ -6,13 +6,13 @@
 </c:if>
 <table>
   <tr>
-    <jsp:include page="../${param.mbl}pi/roHe.jsp"/>
+    <jsp:include page="../pi/roHe.jsp"/>
     <th class="column-actions">${i18n.getMsg('Actions', rvs.upf.lng.iid)}</th>
   </tr>
   <c:forEach var="ent" items="${rvs.uvs.ents}">
     <c:set var="ent" value="${ent}" scope="request"/>
     <tr>
-      <jsp:include page="../${param.mbl}pi/roDe.jsp"/>
+      <jsp:include page="../pi/roDe.jsp"/>
       <td class="column-actions">
         <c:if test="${empty param.flyPi}">
           <jsp:include page="../pi/${hldUvd.stgNn(cls,'pic')}.jsp"/>
