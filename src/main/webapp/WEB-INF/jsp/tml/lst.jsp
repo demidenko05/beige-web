@@ -5,6 +5,10 @@
   <jsp:include page="../ls/${liHe}.jsp"/>
 </c:if>
 <c:set var="liAc" value="${hldUvd.stg(cls,'liAc')}"/>
+<c:set var="liFo" value="${hldUvd.stg(cls,'liFo')}"/>
+<c:if test="${not empty liFo}">
+  <jsp:include page="../ls/${liFo}.jsp"/>
+</c:if>
 <table>
   <tr>
     <jsp:include page="../ls/roHe.jsp"/>
@@ -22,7 +26,3 @@
     </tr>
   </c:forEach>
 </table>
-<c:set var="liFo" value="${hldUvd.stg(cls,'liFo')}"/>
-<c:if test="${not empty liFo}">
-  <jsp:include page="../ls/${liFo}.jsp"/>
-</c:if>

@@ -46,6 +46,17 @@
               <tbody>
                 <tr>
                   <td>
+                    <label>${i18n.getMsg("pgSz", rvs.upf.lng.iid)}</label>
+                  </td>
+                <c:if test="${not empty param.mbl}"><tr></tr></c:if>
+                  <td>
+                    <div class="input-line">
+                      <input type="number" name ="pgSz" value="${rvs.cpf.pgSz}" onchange="bsInpChn(this);">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
                     <label>${i18n.getMsg("lng", rvs.upf.lng.iid)}</label>
                   </td>
                 <c:if test="${not empty param.mbl}"><tr></tr></c:if>
