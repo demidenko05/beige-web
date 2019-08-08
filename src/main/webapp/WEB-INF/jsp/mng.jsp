@@ -20,8 +20,23 @@
     <div class="dialog-title">
       ${i18n.getMsg("mngSoftware", rvs.upf.lng.iid)}
     </div>
-    <form method="post">
+    <form method="post" action="?prc=MngSft">
       <table class="tbl-fieldset">
+        <tr>
+          <td>
+            <label>${i18n.getMsg("rngMth", rvs.upf.lng.iid)}:</label>
+          </td>
+          <td>
+            <div style="display: flex;">
+              <select name="act" onchange="bsInpChn(this);">
+                <c:if test="${mngSft.log.rngMth eq 'ONLY'}"> <c:set var="sels" value="selected"/> </c:if>
+                <option value="sonl" ${sels}>${i18n.getMsg("ONLY", rvs.upf.lng.iid)}</option>
+                <c:if test="${mngSft.log.rngMth eq 'MULTI'}"> <c:set var="selm" value="selected"/> </c:if>
+                <option value="amul" ${selm}>${i18n.getMsg("MULTI", rvs.upf.lng.iid)}</option>
+              </select>
+            </div>
+          </td>
+        </tr>
         <tr>
           <td>
             <label>${i18n.getMsg("dbgSh", rvs.upf.lng.iid)}:</label>
@@ -63,6 +78,27 @@
         <button onclick="if (bsIfFrmChd(this.form)) bsCnfSbm(this, '${apply}?'); return false;" class="btn">${apply}</button>
       </div>
     </form>
+    <c:if test="${mngSft.log.ranges != null && mngSft.log.ranges.size() gt 0}">
+      <c:set var="delq" value="${i18n.getMsg('Delete', rvs.upf.lng.iid)}"/>
+      <div>
+        <table>
+          <tr>
+            <th>${i18n.getMsg('dbgFl', rvs.upf.lng.iid)}</th>
+            <th>${i18n.getMsg('dbgCl', rvs.upf.lng.iid)}</th>
+            <th class="column-actions">${i18n.getMsg('Actions', rvs.upf.lng.iid)}</th>
+          </tr>
+          <c:forEach var="rng" items="${mngSft.log.ranges}" varStatus="vrSt">
+            <tr>
+              <td>${rng.dbgFl}</td>
+              <td>${rng.dbgCl}</td>
+              <td class="column-actions" style="padding: .4rem;">
+                <a class="btn" href="?prc=MngSft&act=drng&ridx=${vrSt.index}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
+              </td>
+            </tr>
+          </c:forEach>
+        </table>
+      </div>
+    </c:if>
   </div>
 
   <dialog id="dlgCnf" class="dlg dlg-alert">
