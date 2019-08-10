@@ -1,2 +1,5 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
-${mdl.nme}
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${not empty mdl}">
+  ${mdl.nme}
+</c:if>

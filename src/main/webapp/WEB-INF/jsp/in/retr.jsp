@@ -15,7 +15,7 @@
     <div class="input-line">
       <select name="CsvMth.rtrNm" onchange="bsInpChn(this);">
         <option value="" ${emptsel}>-</option>
-        <c:forEach var="rtnm" items="${hlRtrs.nms}">
+        <c:forEach var="rtnm" items="${rvs.retrNms}">
           <c:if test="${ent.rtrNm ne rtnm}">
             <c:set var="sel" value=""/>
           </c:if>
