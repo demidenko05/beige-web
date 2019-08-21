@@ -12,7 +12,7 @@
         <c:set var="reqd" value="required"/>
       </c:if>
       <input class="picked-appearence" id="${cls.simpleName}${fdNm}ApVsb" disabled="disabled" type="text" value="${ent[fdNm].nme}">
-      <input id="${cls.simpleName}${fdNm}Id" ${reqd} type="hidden" name="${cls.simpleName}.${fdNm}" value="${ent[fdNm].iid}">
+      <input id="${cls.simpleName}${fdNm}Id" ${reqd} type="hidden" name="${cls.simpleName}.${fdNm}" value="${hldUvd.toStr(rvs,cls,fdNm,ent[fdNm])}">
       <button type="button" ${auFoc} class="btn" onclick="bsPick('${hldUvd.fldCls(cls,fdNm).simpleName}','${cls.simpleName}','${fdNm}','&mbl=${param.mbl}');">...</button>
       <c:set var="auFoc" value="" scope="request"/>
       <button type="button" class="btn" onclick="bsClrSelEnt('${cls.simpleName}${fdNm}');">X</button>
