@@ -8,8 +8,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="../css/bsPrn.css" />
-  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="${urlPrf}css/bsPrn.css" />
+  <link rel="icon" type="image/png" href="${urlPrf}img/favicon.png">
   <title>${i18n.getMsg(cls.simpleName, rvs.upf.lng.iid)}, <fmt:formatDate value="${now}" type="both" timeStyle="short"/></title>
 </head>
 <body>
