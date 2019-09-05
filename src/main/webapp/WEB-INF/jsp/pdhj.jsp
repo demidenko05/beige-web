@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <jsp:include page="tml/var.jsp"/>
 <jsp:useBean id="usdDp" class="java.util.HashMap" scope="request"/>
-<c:set var="lsPlNm" value="pisPl" scope="request"/>
+<c:set var="lsPlNm" value="pisPlD" scope="request"/>
 <c:set var="rndLst" value="pj" scope="request"/>
 <c:set var="prfFlOrFrm" value="${lsPlNm}" scope="request"/>
 <c:set var="prfFlOr" value="fop" scope="request"/>
