@@ -5,7 +5,7 @@
 <jsp:useBean id="usdDp" class="java.util.HashMap" scope="request"/>
 <c:set var="lsPlNm" value="pisPl" scope="request"/>
 <c:set var="rndLst" value="pj" scope="request"/>
-<c:set var="prfFlOrFrm" value="${lsPlNm}" scope="request"/>
+<c:set var="prfFlOrFrm" value="${lsPlNm}${param.ent}" scope="request"/>
 <c:set var="prfFlOr" value="fop" scope="request"/>
 <c:if test="${param.jscr == null}">
 <c:set var="jscr" value="${hldUvd.setJs(rvs,null,null)}"/>
