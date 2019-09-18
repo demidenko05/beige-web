@@ -80,9 +80,8 @@
     <div class="dialog-title">
       ${i18n.getMsg("Create", rvs.upf.lng.iid)}
     </div>
-    <form method="post">
+    <form method="post" action="?prc=PrcMngDb">
       <input type="hidden" name="act" value="create">
-      <input type="hidden" name="prc" value="PrcMngDb">
       <table class="tbl-fieldset">
         <tr>
           <td>
