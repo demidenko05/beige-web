@@ -32,7 +32,7 @@
     -->
 
   <Realm className="org.apache.catalina.realm.JDBCRealm" 
-    connectionURL="jdbc:postgresql:beigeblc?user=beigeaccounting&amp;password=beigeaccounting"
+    connectionURL="jdbc:postgresql:bsblc?user=beigeaccounting&amp;password=beigeaccounting"
     driverName="org.postgresql.Driver"
     roleNameCol="rol"
     userCredCol="pwd"
