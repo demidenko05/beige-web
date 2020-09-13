@@ -164,13 +164,18 @@
     <dependency>
       <groupId>org.beigesoft</groupId>
       <artifactId>beige-blc</artifactId>
-      <version>1.0</version>
+      <version>1.0</version><!--new fixed resources\properties (MySql and I18N) are copied here to avoid deploing new 1.1-->
       <exclusions>
         <exclusion>
           <groupId>com.zaxxer</groupId>
           <artifactId>HikariCP</artifactId>
         </exclusion>
       </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.6.2</version>
     </dependency>
     <dependency>
       <groupId>org.beigesoft</groupId>
@@ -180,6 +185,10 @@
         <exclusion>
           <groupId>org.beigesoft</groupId>
           <artifactId>beige-blc</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.sun.mail</groupId>
+          <artifactId>javax.mail</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
