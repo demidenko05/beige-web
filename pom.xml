@@ -295,7 +295,7 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-  
+
   <scm>
     <url>https://github.com/demidenko05/beige-web.git</url>
     <connection>scm:git:git@github.com:demidenko05/beige-web.git</connection>
