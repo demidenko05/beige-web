@@ -164,7 +164,7 @@
     <dependency>
       <groupId>org.beigesoft</groupId>
       <artifactId>beige-blc</artifactId>
-      <version>1.0</version><!--new fixed resources\properties (MySql and I18N) are copied here to avoid deploing new 1.1-->
+      <version>1.1-SNAPSHOT</version>
       <exclusions>
         <exclusion>
           <groupId>com.zaxxer</groupId>
@@ -180,7 +180,7 @@
     <dependency>
       <groupId>org.beigesoft</groupId>
       <artifactId>beige-web-jar</artifactId>
-      <version>1.0</version>
+      <version>1.0</version><!--TODO check-->
       <exclusions>
         <exclusion>
           <groupId>org.beigesoft</groupId>
