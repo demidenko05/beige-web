@@ -40,13 +40,13 @@
             ${database}.sqlite
           </td>
           <td style="padding: 1rem;">
-            <a class="btn" href="?prc=PrcMngDb&act=change&dbNm=${database}" onclick="bsCnfHref(this, '${changeq}?'); return false;">${i18n.getMsg("Change", rvs.upf.lng.iid)}</a>
+            <a class="btn" href="?prc=PrcMngDb&act=change&nm=${database}" onclick="bsCnfHref(this, '${changeq}?'); return false;">${i18n.getMsg("Change", rvs.upf.lng.iid)}</a>
             <br><br>
             <c:if test="${not empty ourPublicKeyStr && not empty foreignPublicKeyStr}">
-              <a class="btn" href="?prc=PrcMngDb&act=backup&dbNm=${database}" onclick="bsCnfHref(this, '${backupq}?'); return false;">${i18n.getMsg("Backup", rvs.upf.lng.iid)}</a>
+              <a class="btn" href="?prc=PrcMngDb&act=backup&nm=${database}" onclick="bsCnfHref(this, '${backupq}?'); return false;">${i18n.getMsg("Backup", rvs.upf.lng.iid)}</a>
               <br><br>
             </c:if>
-            <a class="btn" href="?prc=PrcMngDb&act=delete&dbNm=${database}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
+            <a class="btn" href="?prc=PrcMngDb&act=delete&nm=${database}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
           </td>
         </tr>
       </c:forEach>
@@ -58,7 +58,7 @@
     <h4>${i18n.getMsg("backuped_db", rvs.upf.lng.iid)} in ${backupDir}:</h4>
       <table>
       <tr>
-        <th style="padding: .4rem;">${i18n.getMsg("Database", rvs.upf.lng.iid)}</th>
+        <th style="padding: .4rem;">${i18n.getMsg("DatabaseLog", rvs.upf.lng.iid)}</th>
         <th style="padding: .4rem;">${i18n.getMsg("Actions", rvs.upf.lng.iid)}</th>
       </tr>
       <c:forEach var="database" items="${bkDatabases}">
@@ -66,11 +66,32 @@
           <td style="padding: .4rem;">
             ${database}.sqlten
           </td>
-          <c:if test="${not empty ourPublicKeyStr && not empty foreignPublicKeyStr}">
-            <td style="padding: 1rem;">
-              <a class="btn" href="?prc=PrcMngDb&act=restore&dbNm=${database}" onclick="bsCnfHref(this, '${restoreq}?'); return false;">${i18n.getMsg("Restore", rvs.upf.lng.iid)}</a>
-            </td>
-          </c:if>
+          <td style="padding: 1rem;">
+            <c:if test="${not empty ourPublicKeyStr && not empty foreignPublicKeyStr}">
+              <a class="btn" href="?prc=PrcMngDb&act=restore&nm=${database}" onclick="bsCnfHref(this, '${restoreq}?'); return false;">${i18n.getMsg("Restore", rvs.upf.lng.iid)}</a>
+            </c:if>
+            <a class="btn" href="?prc=PrcMngDb&act=delEnDb&nm=${database}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
+          </td>
+        </tr>
+      </c:forEach>
+      <c:forEach var="logne" items="${bkLogs}">
+        <tr>
+          <td style="padding: .4rem;">
+            ${logne}.log
+          </td>
+          <td style="padding: 1rem;">
+            <a class="btn" href="?prc=PrcMngDb&act=delLog&nm=${logne}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
+          </td>
+        </tr>
+      </c:forEach>
+      <c:forEach var="logen" items="${bkEnLogs}">
+        <tr>
+          <td style="padding: .4rem;">
+            ${logen}.logen
+          </td>
+          <td style="padding: 1rem;">
+            <a class="btn" href="?prc=PrcMngDb&act=delEnLog&nm=${logen}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
+          </td>
         </tr>
       </c:forEach>
     </table>
@@ -89,7 +110,7 @@
           </td>
           <td>
             <div style="display: flex;">
-              <input name="dbNm" value="dbmy">.sqlite
+              <input name="nm" value="dbmy">.sqlite
             </div>
           </td>
         </tr>
