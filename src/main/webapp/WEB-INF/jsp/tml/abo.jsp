@@ -28,7 +28,7 @@
           <label>${i18n.getMsg("dscr", rvs.upf.lng.iid)}:</label>
         </td>
         <td>
-          ${rvs.dbInf.inf}
+          ${rvs.appInf}
         </td>
       </tr>
       <tr>
