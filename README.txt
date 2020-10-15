@@ -36,6 +36,12 @@ If you has different JEE server, then you have to make JEE-authentication by you
 
 See beige-acc ... beige-accjet projects to make it work on Android.
 
-licenses:
+-------------------------------------------------------------------------------------
+license/лицензия:
 BSD 2-Clause License
 https://sites.google.com/site/beigesoftware/bsd2csl
+
+3-D PARTY LICENSES / лицензии стороннего ПО:
+JQuery by JS Foundation and other contributors:
+MIT license
+https://jquery.org/license
