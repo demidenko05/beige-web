@@ -69,6 +69,7 @@
           <td style="padding: 1rem;">
             <c:if test="${not empty ourPublicKeyStr && not empty foreignPublicKeyStr}">
               <a class="btn" href="?prc=PrcMngDb&act=restore&nm=${database}" onclick="bsCnfHref(this, '${restoreq}?'); return false;">${i18n.getMsg("Restore", rvs.upf.lng.iid)}</a>
+              <br><br>
             </c:if>
             <a class="btn" href="?prc=PrcMngDb&act=delEnDb&nm=${database}" onclick="bsCnfHref(this, '${delq}?'); return false;">${i18n.getMsg("Delete", rvs.upf.lng.iid)}</a>
           </td>
