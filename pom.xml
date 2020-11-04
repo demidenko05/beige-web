@@ -184,7 +184,7 @@
     <dependency>
       <groupId>org.beigesoft</groupId>
       <artifactId>beige-web-jar</artifactId>
-      <version>1.0</version><!--TODO check-->
+      <version>1.0</version><!--checked-->
       <exclusions>
         <exclusion>
           <groupId>org.beigesoft</groupId>
